@@ -1,11 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); $config = D("Basic")->select(); $navs = D("Menu")->getBarMenus(); ?>
-<!doctype html>
-<html lang="en">
-<head>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<!-- saved from url=(0026)http://cmsnews.t.imooc.io/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="UTF-8">
-  <title><?php echo ($config["title"]); ?></title>
-  <meta name="keywords" content="<?php echo ($config["keywords"]); ?>" />
-  <meta name="description" content="<?php echo ($config["description"]); ?>" />
+  <title>singcms</title>
+  <meta name="keywords" content="singcms  资讯 体育 新闻 科技">
+  <meta name="description" content="singcms资讯网是提供最新的体育等栏目的新闻网站">
   <link rel="stylesheet" href="/Public/css/bootstrap.min.css" type="text/css" />
   <link rel="stylesheet" href="/Public/css/home/main.css" type="text/css" />
 </head>
@@ -14,14 +13,13 @@
   <div class="navbar-inverse">
     <div class="container">
       <div class="navbar-header">
-        <a href="/">
-          <img src="/Public/images/logo.png" alt="">
+        <a href="">
+          <img src="/Public/image/logo.png" alt="">
         </a>
       </div>
       <ul class="nav navbar-nav navbar-left">
-        <li><a href="/" <?php if($result['catId'] == 0): ?>class="curr"<?php endif; ?>>首页</a></li>
-        <?php if(is_array($navs)): foreach($navs as $key=>$vo): ?><li><a href="/index.php?c=cat&id=<?php echo ($vo["menu_id"]); ?>" <?php if($vo['menu_id'] == $result['catId']): ?>class="curr"<?php endif; ?>><?php echo ($vo["name"]); ?></a></li><?php endforeach; endif; ?>
-      </ul>
+        <li><a href="" class="curr">首页</a></li>
+        <li><a href="">老司机带带我</a></li><li><a href="">体育</a></li><li><a href="">科技</a></li>      </ul>
     </div>
   </div>
 </header>
@@ -31,32 +29,53 @@
       <div class="col-sm-9 col-md-9">
         <div class="banner">
           <div class="banner-left">
-            <div class="banner-info"><span>阅读数</span><i class="news_count node-<?php echo ($result['topPicNews'][0]['news_id']); ?>" news-id="<?php echo ($result['topPicNews'][0]['news_id']); ?>" id="node-<?php echo ($result['topPicNews'][0]['news_id']); ?>"></i></div>
-            <a target="_blank" href="/index.php?c=detail&id=<?php echo ($result['topPicNews'][0]['news_id']); ?>"><img width="670" height="360" src="<?php echo ($result['topPicNews'][0]['thumb']); ?>" alt=""></a>
+            <div class="banner-info"><span>阅读数</span><i class="news_count node-21" news-id="21" id="node-21">929</i></div>
+            <a target="_blank" href=""><img width="670" height="360" src="/Public/image/56e519a185c93.png" alt=""></a>
           </div>
           <div class="banner-right">
             <ul>
-              <?php if(is_array($result['topSmailNews'])): $i = 0; $__LIST__ = $result['topSmailNews'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
-                <a target="_blank" href="/index.php?c=detail&id=<?php echo ($vo["news_id"]); ?>"><img width="150" height="113" src="<?php echo ($vo["thumb"]); ?>" alt="<?php echo ($vo["title"]); ?>"></a>
-              </li><?php endforeach; endif; else: echo "" ;endif; ?>
-
+              <li>
+                <a target="_blank" href=""><img width="150" height="113" src="/Public/image/56e51b6ac8ce2.jpg" alt="李克强让部长们当第一新闻发言人"></a>
+              </li><li>
+                <a target="_blank" href=""><img width="150" height="113" src="/Public/image/56e51fc82b13a.png" alt="中超-汪嵩世界波制胜 富力客场1-0力擒泰达"></a>
+              </li><li>
+                <a target="_blank" href=""><img width="150" height="113" src="/Public/image/56e51cbd34470.png" alt="重庆美女球迷争芳斗艳"></a>
+              </li>
             </ul>
           </div>
         </div>
         <div class="news-list">
-          <?php if(is_array($result['listNews'])): $i = 0; $__LIST__ = $result['listNews'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><dl>
-            <dt><a target="_blank" href="/index.php?c=detail&id=<?php echo ($vo["news_id"]); ?>"><?php echo ($vo["title"]); ?></a></dt>
+          <dl>
+            <dt><a target="_blank" href="">中超-汪嵩世界波制胜 富力客场1-0力擒泰达</a></dt>
             <dd class="news-img">
-              <a target="_blank" href="/index.php?c=detail&id=<?php echo ($vo["news_id"]); ?>"><img width="200" height="120" src="<?php echo ($vo["thumb"]); ?>" alt="<?php echo ($vo["title"]); ?>"></a>
+              <a target="_blank" href=""><img width="200" height="120" src="/Public/image/56e51fc82b13a.png" alt="中超-汪嵩世界波制胜 富力客场1-0力擒泰达"></a>
             </dd>
             <dd class="news-intro">
-              <?php echo ($vo["description"]); ?>
-            </dd>
+              中超-汪嵩世界波制胜 富力客场1-0力擒泰达            </dd>
             <dd class="news-info">
-              <?php echo ($vo["keywords"]); ?> <span><?php echo (date("Y-m-d H:i:s",$vo["create_time"])); ?></span> 阅读(<i news-id="<?php echo ($vo["news_id"]); ?>" class="news_count node-<?php echo ($vo["news_id"]); ?>"><?php echo ($vo["count"]); ?></i>)
+              中超 汪嵩世界波  富力客场 1-0力擒泰达 <span>2016-03-13 16:07:40</span> 阅读(<i news-id="24" class="news_count node-24">1339</i>)
             </dd>
-          </dl><?php endforeach; endif; else: echo "" ;endif; ?>
-
+          </dl><dl>
+            <dt><a target="_blank" href="">李克强让部长们当第一新闻发言人</a></dt>
+            <dd class="news-img">
+              <a target="_blank" href=""><img width="200" height="120" src="/Public/image/56e51b6ac8ce2.jpg" alt="李克强让部长们当第一新闻发言人"></a>
+            </dd>
+            <dd class="news-intro">
+              部长直接面对媒体回应关切，还能直接读到民情民生民意，而不是看别人的舆情汇报。            </dd>
+            <dd class="news-info">
+              李克强  新闻发言人 <span>2016-03-13 15:49:22</span> 阅读(<i news-id="22" class="news_count node-22">667</i>)
+            </dd>
+          </dl><dl>
+            <dt><a target="_blank" href="">习近平今日下午出席解放军代表团全体会议</a></dt>
+            <dd class="news-img">
+              <a target="_blank" href=""><img width="200" height="120" src="/Public/image/56e519a185c93.png" alt="习近平今日下午出席解放军代表团全体会议"></a>
+            </dd>
+            <dd class="news-intro">
+              中共中央总书记            </dd>
+            <dd class="news-info">
+              中共中央总书记 国家主席 中央军委主席 习近平 <span>2016-03-13 15:41:36</span> 阅读(<i news-id="21" class="news_count node-21">929</i>)
+            </dd>
+          </dl>
         </div>
       </div>
       <!--网站右侧信息-->
@@ -68,22 +87,25 @@
 
   <div class="right-content">
     <ul>
-      <?php if(is_array($result['rankNews'])): $k = 0; $__LIST__ = $result['rankNews'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?><li class="num<?php echo ($k); ?> curr">
-        <a target="_blank" href="/index.php?c=detail&id=<?php echo ($vo["news_id"]); ?>"><?php echo ($vo["small_title"]); ?></a>
-        <?php if($k == 1): ?><div class="intro">
-          <?php echo ($vo["description"]); ?>
-        </div><?php endif; ?>
-      </li><?php endforeach; endif; else: echo "" ;endif; ?>
-    </ul>
+      <li class="num1 curr">
+        <a target="_blank" href="">中超-汪嵩世界波制胜 富力客场1-0力擒泰达</a>
+        <div class="intro">
+          中超-汪嵩世界波制胜 富力客场1-0力擒泰达        </div>      </li><li class="num2 curr">
+        <a target="_blank" href="">习近平出席解放军代表团全体会议</a>
+              </li><li class="num3 curr">
+        <a target="_blank" href="">李克强让部长们当第一新闻发言人</a>
+              </li>    </ul>
   </div>
-  <?php if(is_array($result['advNews'])): $k = 0; $__LIST__ = $result['advNews'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?><div class="right-hot">
-    <a target="_blank" href="<?php echo ($vo["url"]); ?>"><img src="<?php echo ($vo["thumb"]); ?>" alt="<?php echo ($vo["name"]); ?>"></a>
-  </div><?php endforeach; endif; else: echo "" ;endif; ?>
-</div>
+  <div class="right-hot">
+    <a target="_blank" href=""><img src="/Public/image/56e519a185c93.png" alt=""></a>
+  </div><div class="right-hot">
+    <a target="_blank" href=""><img src="/Public/image/56e51b6ac8ce2.jpg" alt=""></a>
+  </div></div>
     </div>
   </div>
 </section>
-</body>
+
 <script src="/Public/js/jquery.js"></script>
 <script src="/Public/js/count.js"></script>
+</body>
 </html>
